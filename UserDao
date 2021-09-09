@@ -1,0 +1,5 @@
+package com.slime.dao;
+
+public interface UserDao {
+    public void getUser();
+}
