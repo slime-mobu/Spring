@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    第一种：下标赋值-->
+<!--    <bean id="user" class="com.slime.pojo.User">-->
+<!--        <constructor-arg index="0" value="slime"/>-->
+<!--    </bean>-->
+    <!--第二种：通过类型 假设两个参数都为String 不建议使用-->
+<!--    <bean id="user" class="com.slime.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="slime"/>-->
+<!--    </bean>-->
+
+<!--    第三种：直接通过参数名来设置-->
+    <bean id="user" class="com.slime.pojo.User">
+        <constructor-arg name="name" value="slime"/>
+    </bean>
+
+    <!--如果添加了别名，我们也可以使用别名获取到这个对象-->
+    <alias name="user" alias="userNew"/>
+
+    <!--
+    id: bean 的唯一标识符，也就是相当于我们学的对象名
+    class:bean 对象所对应的全限定名 ： 包名 + 类型
+    name:也是别名，而且 name 可以同时取多个别名
+    -->
+    <bean id="userT" class="com.slime.pojo.UserT" name="user2 u2,u3;u4">
+        <property name="name" value="ty"/>
+    </bean>
+
+</beans>
