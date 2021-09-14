@@ -1,0 +1,158 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+//class Solution {
+//    /* Write Code Here */
+//    public String solution(int[] d) {
+//        String res = "";
+//        if(d.length==1&&(d[0]==1||d[0]==2)){
+//            return res;
+//        }
+//        int[] temp = new int[d.length];
+//        int sum = 0;
+//        for(int i=0;i<d.length;i++){
+//            temp[i] = d[i]%3;
+//            sum+=temp[i];
+//        }
+//        if(sum%3==0){
+//            for(int i=0;i<d.length;i++){
+//                res+=String.valueOf(d[i]);
+//            }
+//        }else{
+//            int val = 10;
+//            int index = -1;
+//            for(int i=0;i<d.length;i++){
+//                if(temp[i]==(sum%3)){
+//                    if(d[i]<val){
+//                        val = d[i];
+//                        index = i;
+//                    }
+//                }
+//            }
+//            if(index==-1){
+//                for(int i=0;i<d.length;i++){
+//                    if(temp[i]==0){
+//                        res+=String.valueOf(d[i]);
+//                    }
+//                }
+//            }else {
+//                for(int i=0;i<d.length;i++){
+//                    if(i!=index){
+//                        res+=String.valueOf(d[i]);
+//                    }
+//                }
+//            }
+//        }
+//        return res;
+//    }
+//}
+//
+//public class Main {
+//    public static void main(String[] args){
+//        Scanner in = new Scanner(System.in);
+//        String res;
+//
+//        int _d_size = 0;
+//        _d_size = Integer.parseInt(in.nextLine().trim());
+//        int[] _d = new int[_d_size];
+//        int _d_item;
+//        for(int _d_i = 0; _d_i < _d_size; _d_i++) {
+//            _d_item = Integer.parseInt(in.nextLine().trim());
+//            _d[_d_i] = _d_item;
+//        }
+//
+//        res = new Solution().solution(_d);
+//        System.out.println(res);
+//    }
+//
+//}
+
+
+//class Solution {
+//    /* Write Code Here */
+//    public int solution(int[] arr) {
+//        for(int i=0;i<arr.length;i++){
+//            int min = arr[i];
+//            int mIndex = i;
+//            for (int j=i+1;j<arr.length;j++){
+//                if(arr[j]<min){
+//                    min = arr[j];
+//                    mIndex = j;
+//                }
+//            }
+//            int temp = arr[mIndex];
+//            arr[mIndex] = arr[i];
+//            arr[i] = temp;
+//        }
+//        int max = 0;
+//        for(int i=0;i<arr.length;i++){
+//            max += (arr[i]*(i+1));
+//        }
+//        for (int i = 1;i < arr.length; i++) {
+//            int sum = 0;
+//            int n = 1;
+//            for(int j=i;j<arr.length;j++){
+//                sum+=(arr[j]*n);
+//                n++;
+//            }
+//            if(sum>max){
+//                max = sum;
+//            }else {
+//                break;
+//            }
+//        }
+//        return max;
+//    }
+//}
+//
+//public class Main {
+//    public static void main(String[] args){
+//        Scanner in = new Scanner(System.in);
+//        int res;
+//
+//        int _arr_size = 0;
+//        _arr_size = Integer.parseInt(in.nextLine().trim());
+//        int[] _arr = new int[_arr_size];
+//        int _arr_item;
+//        for(int _arr_i = 0; _arr_i < _arr_size; _arr_i++) {
+//            _arr_item = Integer.parseInt(in.nextLine().trim());
+//            _arr[_arr_i] = _arr_item;
+//        }
+//
+//        res = new Solution().solution(_arr);
+//        System.out.println(String.valueOf(res));
+//
+//    }
+//}
+
+class Solution {
+    /* Write Code Here */
+    public int solution(String str) {
+        String regStr = "";
+
+
+
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int res;
+
+        String _str;
+        try {
+            _str = in.nextLine();
+        } catch (Exception e) {
+            _str = null;
+        }
+
+        res = new Solution().solution(_str);
+        System.out.println(String.valueOf(res));
+
+    }
+}
+
