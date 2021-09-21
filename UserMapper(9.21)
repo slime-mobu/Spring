@@ -1,0 +1,9 @@
+package com.slime.mapper;
+
+import com.slime.pojo.User;
+
+import java.util.List;
+
+public interface UserMapper {
+    public List<User> selectUser();
+}
